@@ -41,14 +41,6 @@ A good material about [Architecture decision record](https://github.com/joelpark
  - compatible adr-tools
  - custom templates: add a `template.md` file in the save path
 
-HTML Reporter Example
----
- 
- - [ADR Example](https://phodal.github.io/adr/examples/export-1.html)
- - [ADR Tools Example](https://phodal.github.io/adr/examples/export-3.html)
- - [会分期 Example](https://phodal.github.io/adr/examples/export-2.html)
- - [Arachne Framework Example](https://phodal.github.io/adr/examples/export-4.html)
-
 Screenshots
 ---
 
