@@ -1,6 +1,6 @@
 {
   "name": "adrs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Command-line tools for working with Architecture Decision Records",
   "main": "build/main/index.js",
   "bin": "build/main/cli.js",
