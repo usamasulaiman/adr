@@ -36,7 +36,17 @@ npm install -g adr
 adr init <template>
 ```
 
-e.x: ``adr init en``
+e.x: ``adr init madr``
+
+Options available for templates are
+```
+basic
+alexandrian
+madr
+planguage
+tree_akerman
+business_case
+```
 
 ### new
 
