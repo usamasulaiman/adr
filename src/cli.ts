@@ -55,9 +55,9 @@ program
   .action(generate)
 
 program
-  .command('init <language>')
+  .command('init <template>')
   .alias('i')
-  .description('init ADR with language, e.g. ``adr init en``')
+  .description('init ADR with template, e.g. ``adr init madr``')
   .action(init)
 
 program

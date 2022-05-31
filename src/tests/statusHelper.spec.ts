@@ -33,7 +33,7 @@ test('ADR: list status', t => {
   ])
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'zh-cn'
+    template: 'basic'
   })
   let fsReadSpy = sinon.stub(fs, 'readFileSync')
     .onCall(0).returns(mdTemplate)
@@ -62,14 +62,14 @@ test('ADR:status helper set status', t => {
   ])
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'zh-cn'
+    template: 'basic'
   })
   let fsReadSpy = sinon.stub(fs, 'readFileSync')
     .onCall(0).returns(mdTemplate)
     .onCall(1).returns(mdTemplate)
 
   StatusHelper.setStatus('./001-编写完整的单元测试.md', '完成')
-  // t.deepEqual(fsWriteSpy.calledWith('./001-编写完整的单元测试.md', '{"language":"en","path":"docs/adr/","prefix":"","digits":4}'), true)
+
   t.deepEqual(true, true)
   fsReadSpy.restore()
   fsWriteSpy.restore()

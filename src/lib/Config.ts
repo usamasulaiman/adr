@@ -8,7 +8,7 @@ let path = require('path')
 import Utils from './utils'
 
 let DEFAULT_CONFIG = {
-  language: 'en',
+  template: 'basic',
   path: Utils.getWorkDir() + '/docs/adr/',
   prefix: '',
   digits: 4,
@@ -46,8 +46,8 @@ function getConfig (key: string) {
   return defaultValue
 }
 
-function getLanguage () {
-  return getConfig('language')
+function getTemplate () {
+  return getConfig('template')
 }
 
 function getPrefix () {
@@ -77,7 +77,7 @@ function getEditor (): string {
 let Config = {
   getAllConfig: getAllConfig,
   getSavePath: getSavePath,
-  getLanguage: getLanguage,
+  getTemplate: getTemplate,
   getPrefix: getPrefix,
   getDigits: getDigits,
   getEditor: getEditor,

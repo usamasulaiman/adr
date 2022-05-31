@@ -57,7 +57,7 @@ export function logs (index): string {
   let filePath = path + currentFileName
   let allStatus = StatusHelper.getAllStatus(filePath)
   if (allStatus.length === 0) {
-    console.log('no status: did .adr.json config has correct config of language??')
+    console.log('no status: did .adr.json config has correct config of template??')
     return ''
   }
   let tableData: string[][] = []

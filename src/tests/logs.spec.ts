@@ -26,7 +26,7 @@ test('ADR: logs', t => {
   let renameSpy = sinon.stub(fs, 'renameSync')
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'zh-cn'
+    template: 'basic'
   })
 
   let entriesSpy = sinon.stub(walkSync, 'entries').returns([
@@ -73,7 +73,7 @@ test('ADR: logs handles non existent indexes', t => {
   let renameSpy = sinon.stub(fs, 'renameSync')
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'zh-cn'
+    template: 'basic'
   })
 
   let entriesSpy = sinon.stub(walkSync, 'entries').returns([])

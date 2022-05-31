@@ -20,7 +20,7 @@ let adrTemplate = `# 1. 编写完整的单元测试
 
 let adrOptions = JSON.stringify({
   path: './',
-  language: 'en'
+  template: 'basic'
 })
 
 test('ADR: export csv', t => {
@@ -29,7 +29,7 @@ test('ADR: export csv', t => {
   let fsWriteSpy = sinon.stub(fs, 'writeFileSync')
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'zh-cn'
+    template: 'basic'
   })
   let fsReadSpy = sinon.stub(fs, 'readFileSync')
     .onCall(0).returns(JSON.stringify(adrOptions))

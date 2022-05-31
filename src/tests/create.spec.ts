@@ -21,7 +21,7 @@ let adrTemplate = `# {NUMBER}. {TITLE}
 {DATE} 提议`
 let adrOptions = JSON.stringify({
   path: './',
-  language: 'en'
+  template: 'basic'
 })
 
 test('ADR: create', t => {

@@ -117,20 +117,20 @@ test('getNewNumber: when exist last number 001', t => {
   entriesSpy.restore()
 })
 
-test('getLanguage: should enable get language', t => {
+test('getLanguage: should enable get template', t => {
   let fsExistSpy = sinon.stub(fs, 'existsSync').returns(true)
   let cacheSpy = sinon.stub(LRU.prototype, 'get').returns({
     path: 'some',
-    language: 'test'
+    template: 'basic'
   })
   let fsReadSpy = sinon.stub(fs, 'readFileSync').returns(JSON.stringify({
     path: 'some',
-    language: 'test'
+    template: 'basic'
   }))
 
-  let language = Config.getLanguage() ? Config.getLanguage() : ''
-  if (!language) language = ''
-  t.deepEqual(language, 'test')
+  let template = Config.getTemplate() ? Config.getTemplate() : ''
+  if (!template) template = ''
+  t.deepEqual(template, 'test')
   fsExistSpy.restore()
   fsReadSpy.restore()
   cacheSpy.restore()
@@ -139,8 +139,8 @@ test('getLanguage: should enable get language', t => {
 test('createDateString: should return correct date string', t => {
   let clock = sinon.useFakeTimers(new Date(2099,0,1))
 
-  let language = Utils.createDateString()
-  t.deepEqual(language, '2099-01-01')
+  let template = Utils.createDateString()
+  t.deepEqual(template, '2099-01-01')
   clock.restore()
 })
 

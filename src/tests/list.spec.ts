@@ -21,7 +21,7 @@ let adrTemplate = `# 1. 编写单元测试
 
 let adrOptions = JSON.stringify({
   path: './',
-  language: 'zh-cn'
+  template: 'basic'
 })
 
 test('ADR: list', t => {
