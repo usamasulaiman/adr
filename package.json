@@ -1,14 +1,15 @@
 {
-  "name": "adr",
+  "name": "adrs",
   "version": "0.1.0",
   "description": "Command-line tools for working with Architecture Decision Records",
   "main": "build/main/index.js",
   "bin": "build/main/cli.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/phodal/adr",
+  "repository": "https://github.com/usamasulaiman/adr",
   "author": "Usama Sulaiman<sulaiman.usama@gmail.com>",
   "license": "MIT",
+  
   "scripts": {
     "info": "npm-scripts-info",
     "build": "trash build && yarn build:main && yarn build:module && copyfiles -f ./src/lib/templates/* ./build/main/lib/templates/ && yarn copy:template",
@@ -83,6 +84,7 @@
   },
   "keywords": [
     "async",
+    "templates",
     "ava",
     "await",
     "boilerplate",
